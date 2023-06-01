@@ -146,7 +146,7 @@ def facedancer(source_image_url, target_image_url):
     print("loaded models")
     # G.summary()
     image = face_swap(source_image, target_image, RetinaFace, ArcFace, G)
-    cv2.imwrite('result.jpg', image)
+    # cv2.imwrite('result.jpg', image)
     return image
 
 if __name__ == "__main__":
