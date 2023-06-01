@@ -12,7 +12,7 @@ from scipy.ndimage import gaussian_filter
 from tqdm import tqdm
 import subprocess
 
-from utils.utils import (estimate_norm, get_lm, inverse_estimate_norm,
+from FaceDancer.utils.utils import (estimate_norm, get_lm, inverse_estimate_norm,
                          norm_crop, transform_landmark_points)
 
 

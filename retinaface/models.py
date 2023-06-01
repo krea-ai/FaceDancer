@@ -2,7 +2,7 @@ import tensorflow as tf
 from tensorflow.keras import Model
 from tensorflow.keras.applications import MobileNetV2, ResNet50
 from tensorflow.keras.layers import Input, Conv2D, ReLU, LeakyReLU
-from retinaface.anchor import decode_tf, prior_box_tf
+from FaceDancer.retinaface.anchor import decode_tf, prior_box_tf
 
 
 def _regularizer(weights_decay):

@@ -5,7 +5,7 @@ import math
 
 import tensorflow as tf
 from tensorflow.keras.models import model_from_json
-from networks.layers import AdaIN, AdaptiveAttention
+from FaceDancer.networks.layers import AdaIN, AdaptiveAttention
 
 from skimage import transform as trans
 from scipy.signal import convolve2d
