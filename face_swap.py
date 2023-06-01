@@ -41,7 +41,10 @@ import requests
 import cv2
 import numpy as np
 
-MODEL_FOLDER = "/home/erwann/generation-service/safetensor-models"
+MODEL_FOLDER = os.getenv("MODEL_FOLDER", None)
+print("MODEL FOLDER: ", MODEL_FOLDER)
+print("*********8")
+
 
 def face_swap(source, target, RetinaFace,
                   ArcFace, FaceDancer):
@@ -144,8 +147,10 @@ def facedancer(source_image_url, target_image_url):
     # G.summary()
     image = face_swap(source_image, target_image, RetinaFace, ArcFace, G)
     cv2.imwrite('result.jpg', image)
+    return image
 
 if __name__ == "__main__":
     url1 = "https://canvas-generations-v1.s3.us-west-2.amazonaws.com/e13de0cb-c208-487c-9fac-bd90584fc9aa.png"
     url2= "https://canvas-generations-v1.s3.us-west-2.amazonaws.com/bd32cd8f-bf88-49a8-90c2-9b036318d1c5.png"
     facedancer(url1, url2)
+    
